@@ -15,5 +15,5 @@ public class Numbers {
 	
 	public int getNumber1() {return number1;}
 	public int getNumber2() {return number2;}
-	public String getCalculationWanted() {return calculationWanted;}
+	public String getCalcWanted() {return calculationWanted;}
 }
