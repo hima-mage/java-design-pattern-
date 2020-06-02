@@ -6,18 +6,21 @@ public class YoutubeHandler implements Handler {
 	
 	@Override
 	public void setNextHandler(Handler handler) {
-		handler = handler;
+		this.handler = handler;
 		
 	}
 
 	@Override
 	public void handleLink(Video video) {
 		
-		if ( video.getLink().contains("youtube")) {
+		
+		
+		if ( video.getLink().contains("youtube") ) {
 			
 			System.out.println( "i can handle it from youtube" );
 		} else { 
 			System.out.println("i can't handle it from youtube");
+			handler.handleLink(video);
 		}
 		
 	}

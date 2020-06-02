@@ -6,16 +6,19 @@ public class InstagramHandler  implements Handler {
 	
 	@Override
 	public void setNextHandler(Handler handler) {
-		handler = handler; 
+		this.handler = handler; 
 	} 
+	
+	
 	@Override
 	public void handleLink(Video video) {
 		
 		if ( video.getLink().contains("instagram")) {
 			
-			System.out.println( "i can handle it from youtube" );
+			System.out.println( "i can handle it from instagram" );
 		} else { 
-			System.out.println("i can't handle it from youtube");
+			System.out.println("i can't handle it from instagram");
+			handler.handleLink(video);
 		}
 		
 	}

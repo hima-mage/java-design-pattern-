@@ -10,6 +10,6 @@ public class Video {
 	}
 	
 	public void setLink(String Link) {
-		Link = Link;
+		this.Link = Link;
 	}
 }
